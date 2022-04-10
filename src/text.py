@@ -4,7 +4,7 @@ from shared import from_raw, NumberUtil
 COMMENT_FOOTER = """\n\n
 ***\n\n
 [*^(PAW)*](https://paw.digital)*^( | )*
-[*^(Banano Tipper)*](https://github.com/SecureChainFinance/paw_reddit_tipbot)*^( | )*
+[*^(PAW Tipper)*](https://github.com/SecureChainFinance/paw_reddit_tipbot)*^( | )*
 [*^(Opt Out)*](https://reddit.com/message/compose/?to=paw_tipbot&subject=command&message=opt-out)
 """
 
