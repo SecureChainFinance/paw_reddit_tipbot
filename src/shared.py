@@ -15,7 +15,7 @@ from hashlib import blake2b
 from peewee import *
 from playhouse.pool  import PooledPostgresqlExtDatabase
 
-LOGGER = logging.getLogger("banano-reddit-tipbot")
+LOGGER = logging.getLogger("paw-reddit-tipbot")
 LOGGER.setLevel(logging.INFO)
 handler = logging.StreamHandler(sys.stdout)
 formatter = logging.Formatter("%(asctime)s;%(levelname)s;%(message)s", "%Y-%m-%d %H:%M:%S %z")
