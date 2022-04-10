@@ -6,10 +6,10 @@ remove: env-remove
 
 env-setup:
 	conda env create -f environment.yml
-	conda activate banano-reddit-tipbot
+	conda activate paw-reddit-tipbot
 
 env-remove:
-	conda env remove -n banano-reddit-tipbot -y
+	conda env remove -n paw-reddit-tipbot -y
 
 module-setup:
 	pip install -e src
