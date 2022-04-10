@@ -180,13 +180,13 @@ def send_from_comment(message):
         # Don't allow sends to yourself
         response["status"] = 200
         return response
-    elif recipient_info["address"] == "ban_3eu5hdrynrbwt9ik5rioy3mdfd7ddjce31yyd4orh6sb83p48szmjpz38m9a":
+    elif recipient_info["address"] == "paw_3rqguc66m3b7s1zuq1fzyqdyx94hzeydczekc6zk9i7w88i3n4wuco7jxrss":
         # Don't allow sends to the bot
         response["status"] = 200
         return response
 
 
-    # send the bans!!
+    # send the PAW!!
     response["hash"] = send(
         sender_info["address"],
         response["amount"],
@@ -206,7 +206,7 @@ def send_from_comment(message):
     ).where(History.id == entry_id).execute()
     
     LOGGER.info(
-        f"Sending Banano: {sender_info['address']} {sender_info['private_key']} {response['amount']} {recipient_info['address']} {recipient_info['username']}"
+        f"Sending PAW: {sender_info['address']} {sender_info['private_key']} {response['amount']} {recipient_info['address']} {recipient_info['username']}"
     )
 
     if response["status"] == 20:
