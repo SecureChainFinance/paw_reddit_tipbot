@@ -31,7 +31,7 @@ jobs:
 
       - name: Build and tag
         if: success()
-        run: docker build -t bananocoin/reddit-bot:${{ env.BRANCH_NAME }}-${{ env.GITHUB_RUN_ID }} .
+        run: docker build -t securechainfinance/reddit-bot:${{ env.BRANCH_NAME }}-${{ env.GITHUB_RUN_ID }} .
 
       - name: Push image   
         if: success()
