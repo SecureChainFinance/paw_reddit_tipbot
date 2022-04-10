@@ -224,7 +224,7 @@ def handle_history(message):
                         or result.notes == "new user created"
                     ):
                         response += (
-                            "%s: %s | %s Banano to %s | reddit object: %s | %s\n\n"
+                            "%s: %s | %s PAW to %s | reddit object: %s | %s\n\n"
                             % (
                                 result.reddit_time.strftime("%Y-%m-%d %H:%M:%S"),
                                 result.action,
@@ -239,7 +239,7 @@ def handle_history(message):
                         or result.notes == "sent to unregistered address"
                     ):
                         response += (
-                            "%s: %s | %s Banano to %s | reddit object: %s | %s\n\n"
+                            "%s: %s | %s PAW to %s | reddit object: %s | %s\n\n"
                             % (
                                 result.reddit_time.strftime("%Y-%m-%d %H:%M:%S"),
                                 result.action,
@@ -472,7 +472,7 @@ def handle_send(message):
         # Don't allow sends to yourself
         response["status"] = 200
         return response        
-    elif recipient_info["address"] == "ban_3eu5hdrynrbwt9ik5rioy3mdfd7ddjce31yyd4orh6sb83p48szmjpz38m9a":
+    elif recipient_info["address"] == "paw_3eu5hdrynrbwt9ik5rioy3mdfd7ddjce31yyd4orh6sb83p48szmjpz38m9a":
         # Don't allow sends to the bot
         response["status"] = 200
         return response
@@ -487,7 +487,7 @@ def handle_send(message):
         History.update(notes="send to address", address=sender_info["address"], username=sender_info["username"], recipient_username=None, recipient_address=recipient_info["address"],
                     amount=str(response["amount"]), return_status="cleared").where(History.id == entry_id).execute()
         LOGGER.info(
-            f"Sending Banano: {sender_info['address']} {sender_info['private_key']} {response['amount']} {recipient_info['address']}"
+            f"Sending PAW: {sender_info['address']} {sender_info['private_key']} {response['amount']} {recipient_info['address']}"
         )
         return response
 
@@ -495,7 +495,7 @@ def handle_send(message):
     History.update(notes="send to address", address=sender_info["address"], username=sender_info["username"], recipient_username=recipient_info["username"], recipient_address=recipient_info["address"],
                 amount=str(response["amount"]), return_status="cleared").where(History.id == entry_id).execute()
     LOGGER.info(
-        f"Sending Banano: {sender_info['address']} {sender_info['private_key']} {response['amount']} {recipient_info['address']} {recipient_info['username']}"
+        f"Sending PAW: {sender_info['address']} {sender_info['private_key']} {response['amount']} {recipient_info['address']} {recipient_info['username']}"
     )
 
     if response["status"] == 20:
@@ -558,7 +558,7 @@ def handle_opt_in(message):
 
 def parse_recipient_username(recipient_text):
     """
-    Determines if a specified recipient is a banano address or a redditor
+    Determines if a specified recipient is a PAW address or a redditor
     :param recipient_text:
     :return: either {address: valid_address} or {username: user}
     """
