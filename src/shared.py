@@ -54,10 +54,10 @@ except KeyError as e:
     SQL_PASSWORD = ""
     DATABASE_NAME = ""
     TIP_BOT_ON = True
-    TIP_BOT_USERNAME = "banano_reddit_tipbot"
+    TIP_BOT_USERNAME = "paw_reddit_tipbot"
     PROGRAM_MINIMUM = 0.01
     TIP_COMMANDS = ["!ntipz", "!nano_tipz"]
-    TIPBOT_OWNER = "bbedward"
+    TIPBOT_OWNER = "truthful_tips"
     DEFAULT_URL = ""
     PYTHON_COMMAND = ""
     TIPPER_OPTIONS = ""
@@ -116,17 +116,17 @@ if CURRENCY == "Nano":
     def from_raw(amount):
         return amount / 10 ** 30
 
-elif CURRENCY == "Banano":
+elif CURRENCY == "PAW":
 
     def to_raw(amount):
-        ban_amt = float(amount)
-        asStr = str(ban_amt).split(".")
-        banAmount = int(asStr[0])
+        paw_amt = float(amount)
+        asStr = str(paw_amt).split(".")
+        pawAmount = int(asStr[0])
         if len(asStr[1]) > 2:
             asStr[1] = asStr[1][:2]
         asStr[1] = asStr[1].ljust(2, '0')
-        banoshiAmount = int(asStr[1])
-        return (banAmount * (10**29)) + (banoshiAmount * (10 ** 27))
+        pawoshiAmount = int(asStr[1])
+        return (pawAmount * (10**29)) + (pawoshiAmount * (10 ** 27))
 
     def from_raw(amount):
         return amount / (10 ** 29)
