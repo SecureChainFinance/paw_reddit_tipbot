@@ -9,15 +9,15 @@ COMMENT_FOOTER = """\n\n
 """
 
 HELP = """
-Help from Banano Tipper! This bot handles tips via the [PAW](https://paw.digital) currency.
+Help from PAW Tipper! This bot handles tips via the [PAW](https://paw.digital) currency.
 [Visit us on GitHub](https://github.com/SecureChainFinance/paw_reddit_tipbot), the [Wiki](https://github.com/SecureChainFinance/paw_reddit_tipbot/wiki/Using-the-Banano-Reddit-TipBot) 
 or /r/banano_tipbot for more information on its use and its status. Be sure to read the 
 [Terms of Service](https://github.com/SecureChainFinance/paw_reddit_tipbot#terms-of-service)\n\n
 
 If you do not accept the Terms of Service, or do not with to participate, please respond with the text `opt-out`.\n\n
 
-Pw Tipper works in two ways -- either publicly tip a user on a subreddit, or send a PM to /u/paw_tipbot with a PM command below.\n\n
-To tip 0.1 Banano on a comment or post on a [tracked subreddit](https://www.reddit.com/r/banano_tipbot/comments/astwp6/banano_tipbot_status/), make a comment starting with:\n
+PAW Tipper works in two ways -- either publicly tip a user on a subreddit, or send a PM to /u/paw_tipbot with a PM command below.\n\n
+To tip 0.1 PAW on a comment or post on a [tracked subreddit](https://www.reddit.com/r/banano_tipbot/comments/astwp6/banano_tipbot_status/), make a comment starting with:\n
     !paw 0.1
 To tip anywhere on reddit, tag the bot as such (it won't post on the all subreddits, but it will PM the users):\n
     /u/paw_tipbot 0.1
@@ -32,9 +32,9 @@ For PM commands, create a new message with any of the following commands (be sur
     'opt-out' - Disables your account. 
     'opt-in' - Re-enables your account. 
     'help' - Get this help message\n
-If you wanted to send 0.01 Banano to bbedward, reply:\n
-    send 0.01 bbedward\n
-If you have any questions or bug fixes, please reach out on the [Banano subreddit](https://reddit.com/r/banano) or the [Banano Discord](https://chat.banano.cc)."""
+If you wanted to send 0.01 Banano to truthful_tips, reply:\n
+    send 0.01 truthful_tips\n
+If you have any questions or bug fixes, please contact /u/truthful_tips or the [PAW Discord](https://discord.com/invite/DjXn6bb3aE)."""
 
 WELCOME_CREATE = """
 Welcome to PAW Tipper, a reddit tip bot which allows you to tip and send the [BANANO](https://banano.cc) Currency to your favorite redditors! 
