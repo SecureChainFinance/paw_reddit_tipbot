@@ -472,7 +472,7 @@ def handle_send(message):
         # Don't allow sends to yourself
         response["status"] = 200
         return response        
-    elif recipient_info["address"] == "paw_3eu5hdrynrbwt9ik5rioy3mdfd7ddjce31yyd4orh6sb83p48szmjpz38m9a":
+    elif recipient_info["address"] == "paw_3rqguc66m3b7s1zuq1fzyqdyx94hzeydczekc6zk9i7w88i3n4wuco7jxrss":
         # Don't allow sends to the bot
         response["status"] = 200
         return response
